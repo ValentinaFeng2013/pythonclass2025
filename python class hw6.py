@@ -24,10 +24,9 @@ df_final["spike_ratio"] = df_final["World"]/df_final["7day_avg_shift3d"]
 df_filtered = df_final[df_final["flag_spike"]==1]
 df_filtered.plot.scatter(x="date", y='spike_ratio')
 
-# Add labels and title for clarity
 plt.xlabel("Date")
 plt.ylabel("Spike Ratio")
 plt.xticks(rotation=90)
 plt.title("Scatter Plot of Spike Ratio vs. Index (flag_spike = 1)")
-plt.grid(True) # Optional: Add a grid
+plt.grid(True) 
 plt.show()
